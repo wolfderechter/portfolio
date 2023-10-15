@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Project from "../components/Project.astro";
+import Nav from "../components/Nav.astro";
+---
+
+<Layout title="Wolf De Rechter">
+  <Nav/>
+  <main>
+    <p class="introduction" id='home'>
+      Hello I'm Wolf, a <strong>fullstack web developer</strong>. Passionate
+      about creating innovative web solutions and currently working at <strong
+        >Inuits</strong
+      >.
+    </p>
+  </main>
+
+  <div id='projects'>
+    <h2 class='text-[rgb(var(--accent-light))]'>Some of my projects:</h2>
+    <Project title='Title' description='this is my project' thumbnail='./project.png' github='github.com/wolfderechter' demo=''></Project>
+
+  </div>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    margin-top: 10rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 6rem;
+  }
+
+  #projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .introduction strong {
+    color: rgb(var(--accent-light));
+    position: relative;
+  }
+
+  .introduction strong::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: -3px;
+    width: 100%;
+    height: 6px;
+    transform: skew(8deg) translateX(-1%);
+    background: rgb(var(--accent-dark));
+    z-index: -1;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
