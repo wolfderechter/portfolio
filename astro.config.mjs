@@ -1,10 +1,10 @@
 import { defineConfig } from 'astro/config';
-
+import cloudflare from '@astrojs/cloudflare';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://wolfderechter.github.io',
-  base: '/wolfez-portfolio',
+  output: 'server',
+  adapter: cloudflare()
 });
