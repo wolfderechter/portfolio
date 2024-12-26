@@ -2,21 +2,31 @@
 
 ---
 
-
 <div
-  class="flex fixed backdrop-blur-sm bg-[#310a65a6] top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 z-10 rounded-[8px] px-5  text-[rgb(var(--accent-light))]"
+  class="flex fixed backdrop-blur-sm bg-[#310a65a6] top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 z-10 rounded-[8px] px-5 text-[rgb(var(--accent-light))]"
 >
   <ul
-    class="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5"
+    class="flex w-[12rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5"
   >
     <li>
-      <button type='button' id="scrollToTop" class="hover:text-gray-300 transition">Home</button>
+      <button
+        type="button"
+        id="scrollToTop"
+        class="hover:text-gray-300 transition">Home</button
+      >
     </li>
     <li>
-      <a href="mailto:wolfderechter@proton.me" class="hover:text-gray-300 transition">Contact</a>
+      <a
+        href="mailto:wolfderechter@proton.me"
+        class="hover:text-gray-300 transition">Contact</a
+      >
     </li>
     <li>
-      <a href="https://github.com/wolfderechter" target='_blank' class="hover:text-gray-300 transition">Github</a>
+      <a
+        href="https://github.com/wolfderechter"
+        target="_blank"
+        class="hover:text-gray-300 transition">Github</a
+      >
     </li>
   </ul>
 </div>
@@ -27,9 +37,9 @@
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-  })
+  });
 </script>
 <style>
   li {
