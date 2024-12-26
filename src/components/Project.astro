@@ -73,7 +73,6 @@ const { thumbnail, demo, github, title, description } = Astro.props;
   }
 
   .project-body {
-    /* pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col h-full */
     padding-top: 1rem;
     padding-bottom: 1.75rem;
     padding-left: 1.25rem;
@@ -93,6 +92,12 @@ const { thumbnail, demo, github, title, description } = Astro.props;
 
   .project section:hover {
     background-color: #e5e7eb;
+  }
+
+  @media (max-width: 640px) {
+    .project-body {
+      max-width: 50%;
+    }
   }
 
   @media (min-width: 640px) {
