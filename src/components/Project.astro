@@ -4,19 +4,16 @@ interface Props {
   description: string;
   thumbnail: string;
   github: string;
-  demo: string;
+  demo?: string;
 }
 
-const { thumbnail, demo, github, title, description } = Astro.props;
+const { thumbnail, demo, writing, github, title, description } = Astro.props;
 ---
 
 <div class="project">
   <section class="transition bg-white/10 hover:bg-white/20">
     <div class="project-body md:pl-10 md:pr-2 md:pt-10">
       <h3 class="project-title">{title}</h3>
-      <ul class="flex flex-wrap gap-2 mb-3 sm:mt-auto">
-        <p class="font-bold text-gray-500">Made with:<!-- --></p>
-      </ul>
       <p class="project-description mt-2 leading-relaxed text-gray-700 mb-3">
         {description}
       </p>
@@ -31,7 +28,7 @@ const { thumbnail, demo, github, title, description } = Astro.props;
         >
         <!-- Hide demo button if empty -->
         {
-          demo != "" && (
+          demo && (
             <a
               href={demo}
               target="_blank"
