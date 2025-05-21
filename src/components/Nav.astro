@@ -9,11 +9,7 @@
     class="flex w-48 flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5"
   >
     <li>
-      <button
-        type="button"
-        id="scrollToTop"
-        class="hover:text-gray-300 transition">Home</button
-      >
+      <a href="/" class="hover:text-gray-300 transition">Home</a>
     </li>
     <li>
       <a
@@ -31,16 +27,6 @@
   </ul>
 </div>
 
-<script>
-  const scrollBtn = document.querySelector("#scrollToTop") as HTMLButtonElement;
-  scrollBtn.addEventListener("click", () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  });
-</script>
 <style>
   li {
     opacity: 1;
