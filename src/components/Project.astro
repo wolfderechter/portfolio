@@ -5,6 +5,7 @@ interface Props {
   thumbnail: string;
   github: string;
   demo?: string;
+  writing?: string;
 }
 
 const { thumbnail, demo, writing, github, title, description } = Astro.props;
@@ -36,6 +37,19 @@ const { thumbnail, demo, writing, github, title, description } = Astro.props;
               class="flex items-center border-[#111827] text-[#111827] py-2 px-4 mr-2 rounded-full hover:scale-105 opacity-70"
             >
               Demo
+            </a>
+          )
+        }
+        <!-- Hide writings button if empty -->
+        {
+          writing && (
+            <a
+              href=`/writings/${writing}`
+              target="_self"
+              rel="noopener noreferrer"
+              class="flex items-center border-[#111827] text-[#111827] py-2 px-4 mr-2 rounded-full hover:scale-105 opacity-70"
+            >
+                Read more
             </a>
           )
         }
