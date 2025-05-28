@@ -2,32 +2,52 @@
 
 ---
 
-<div
-  class="flex fixed backdrop-blur-sm bg-[#310a65a6] top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0 z-10 rounded-[8px] px-5 text-[rgb(var(--accent-light))]"
->
-  <ul
-    class="flex w-48 flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium sm:w-[initial] sm:flex-nowrap sm:gap-5"
-  >
+<div class="nav-container">
+  <ul class="nav-list">
     <li>
-      <a href="/" class="hover:text-gray-300 transition">Home</a>
+      <a href="/">Home</a>
     </li>
     <li>
-      <a
-        href="mailto:wolfderechter@proton.me"
-        class="hover:text-gray-300 transition">Contact</a
-      >
+      <a href="mailto:wolfderechter@proton.me">Contact</a>
     </li>
     <li>
-      <a
-        href="https://github.com/wolfderechter"
-        target="_blank"
-        class="hover:text-gray-300 transition">Github</a
-      >
+      <a href="https://github.com/wolfderechter" target="_blank">Github</a>
     </li>
   </ul>
 </div>
 
 <style>
+  .nav-container {
+    display: flex;
+    position: fixed;
+    backdrop-filter: blur(4px);
+    background-color: #310a65a6;
+    top: 1.7rem;
+    left: 50%;
+    height: 3rem;
+    transform: translateX(-50%);
+    padding: 0.5rem 0;
+    z-index: 10;
+    border-radius: 8px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    color: rgb(var(--accent-light));
+  }
+
+  .nav-list {
+    display: flex;
+    width: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
   li {
     opacity: 1;
     transform: none;
@@ -44,5 +64,13 @@
     align-items: center;
     justify-content: center;
     padding: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    border-radius: 8px;
+  }
+
+  a:hover {
+    background-color: #984bffa1;
   }
 </style>
