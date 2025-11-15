@@ -1,20 +1,20 @@
 ---
-import Nav from "../components/Nav.astro";
+import Nav from '../components/Nav.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
     <title>{frontmatter.title}</title>
   </head>
   <body>
     <Nav />
     <main>
-      <article class="writing">
-        <h1 class="writing-title">{frontmatter.title}</h1>
+      <article class='writing'>
+        <h1 class='writing-title'>{frontmatter.title}</h1>
         <slot />
         <!-- This is where your Markdown content will appear -->
       </article>
@@ -61,5 +61,23 @@ const { frontmatter } = Astro.props;
     color: rgb(var(--accent-light));
     text-align: center;
     margin-bottom: 2rem;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+
+  th {
+    border-bottom: 1px solid #ddd;
+  }
+
+  tr:last-child {
+    border-top: 1px solid #ddd;
   }
 </style>
