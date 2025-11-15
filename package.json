@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "12.5.3",
-    "@tailwindcss/vite": "^4.1.7",
-    "astro": "5.7.13",
-    "tailwindcss": "^4.1.7"
+    "@astrojs/cloudflare": "12.6.10",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "5.15.7",
+    "tailwindcss": "^4.1.17"
   }
 }
